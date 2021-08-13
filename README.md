@@ -8,10 +8,10 @@ $ pip install zero-shot-re
 
 ## Run the Extractor
 ```python
-from transformers import AutoModel, AutoTokenizer
-from zero-shot-re import RelationExtractor
+from transformers import AutoTokenizer
+from zero_shot_re import RelTaggerModel, RelationExtractor
 
-model = AutoModel.from_pretrained("fractalego/fewrel-zero-shot")
+model = RelTaggerModel.from_pretrained("fractalego/fewrel-zero-shot")
 tokenizer = AutoTokenizer.from_pretrained("fractalego/fewrel-zero-shot")
 
 relations = ['noble title', 'founding date', 'occupation of a person']
